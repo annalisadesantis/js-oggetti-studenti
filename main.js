@@ -80,7 +80,6 @@ $(document).ready(function() {
         "eta": "",
     };
 
-    console.log(studente_utente);
 
     setTimeout(function() {
 
@@ -90,7 +89,24 @@ $(document).ready(function() {
 
         studente_utente.eta = prompt("Inserisci la tua età");
 
+        studenti.push(studente_utente);
+
+        // Ciclo l'oggetto studente al suo interno
+        for (var key in studente_utente) {
+
+            // stampo tutte le chiavi con i suoi valori eccetto la chiave eta
+            if(key != "eta") {
+                console.log(key + ': ' + studente_utente[key]);
+                document.write("<h3>" + key + " : " + studente_utente[key] + "</h3>");
+            }
+        }
+
+        console.log(studenti);
+
+
     }, 2000);
+
+
 
 
 
