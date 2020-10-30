@@ -12,6 +12,9 @@ $(document).ready(function() {
         "eta": 29,
     };
 
+    console.log("Studente 1");
+    document.write("<h2>Studente 1</h2>")
+
     // Creo un ciclo per visualizzare le 3 proprietà
     for (var key in studente) {
         // stampo le proprietà e valori separati
@@ -20,7 +23,55 @@ $(document).ready(function() {
         // stampo le proprietà e valori insieme
         console.log(key + " : " + studente[key]);
         // Stampo nel dom le proprietà e valori insieme
-        document.write("<h2>" + key + " : " + studente[key] + "</h2>")
+        document.write("<h3>" + key + " : " + studente[key] + "</h3>")
+    }
+
+    // Creo un array di oggetti
+    var studenti = [
+       {
+          "nome" : "paola",
+          "cognome" : "rossi",
+          "eta" : 27,
+       },
+       {
+           "nome" : "marco",
+           "cognome" : "bianchi",
+           "eta" : 30,
+       },
+       {
+           "nome" : "alessia",
+           "cognome" : "falco",
+           "eta" : 25,
+       },
+       {
+           "nome" : "giacomo",
+           "cognome" : "orsi",
+           "eta" : 31,
+       },
+   ];
+
+   console.log("Lista studenti:");
+   document.write("<h2>Lista studenti</h2>")
+
+   // Ciclo l'array di oggetti e salvo tutto nella varibile corrente
+    for (var i = 0; i < studenti.length; i++) {
+
+        var studente_corrente = studenti[i];
+
+
+        var nome_studente = studente_corrente.nome;
+        var cognome_studente = studente_corrente.cognome;
+        var eta_studente = studente_corrente.eta;
+
+        // Ciclo l'oggetto al suo interno
+        for (var key in studente_corrente) {
+
+            // stampo tutte le chiavi con i suoi valori eccetto la chiave eta
+            if(key != "eta") {
+                console.log(key + ': ' + studente_corrente[key]);
+                document.write("<h3>" + key + " : " + studente_corrente[key] + "</h3>")
+            }
+        }
     }
 
 
