@@ -69,7 +69,7 @@ $(document).ready(function() {
             // stampo tutte le chiavi con i suoi valori eccetto la chiave eta
             if(key != "eta") {
                 console.log(key + ': ' + studente_corrente[key]);
-                document.write("<h3>" + key + " : " + studente_corrente[key] + "</h3>")
+                document.write("<h3>" + key + " : " + studente_corrente[key] + "</h3>");
             }
         }
     }
@@ -82,26 +82,13 @@ $(document).ready(function() {
 
     console.log(studente_utente);
 
-    var utente;
-
     setTimeout(function() {
 
-        for (var i = 0; i < 3; i++) {
+        studente_utente.nome = prompt("Inserisci il tuo nome");
 
-            var valore_corrente = utente;
+        studente_utente.cognome = prompt("Inserisci il tuo cognome");
 
-            if(i == 0){
-                utente = prompt("Inserisci il tuo nome");
-            }else if(i == 1){
-                utente = prompt("Inserisci il tuo cognome");
-            }else{
-                utente = prompt("Inserisci la tua età");
-            }
-
-
-            console.log(valore_corrente);
-
-        }
+        studente_utente.eta = prompt("Inserisci la tua età");
 
     }, 2000);
 
