@@ -14,9 +14,16 @@ $(document).ready(function() {
 
     // Creo un ciclo per visualizzare le 3 proprietà
     for (var key in studente) {
-        console.log(key);
-        console.log(studente[key]);
+        // stampo le proprietà e valori separati
+        // console.log(key);
+        // console.log(studente[key]);
+        // stampo le proprietà e valori insieme
+        console.log(key + " : " + studente[key]);
+        // Stampo nel dom le proprietà e valori insieme
+        document.write("<h2>" + key + " : " + studente[key] + "</h2>")
     }
+
+
 
 
 });
