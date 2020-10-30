@@ -74,6 +74,36 @@ $(document).ready(function() {
         }
     }
 
+    var studente_utente = {
+        "nome": "",
+        "cognome": "",
+        "eta": "",
+    };
+
+    console.log(studente_utente);
+
+    var utente;
+
+    setTimeout(function() {
+
+        for (var i = 0; i < 3; i++) {
+
+            var valore_corrente = utente;
+
+            if(i == 0){
+                utente = prompt("Inserisci il tuo nome");
+            }else if(i == 1){
+                utente = prompt("Inserisci il tuo cognome");
+            }else{
+                utente = prompt("Inserisci la tua età");
+            }
+
+
+            console.log(valore_corrente);
+
+        }
+
+    }, 2000);
 
 
 
