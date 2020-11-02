@@ -75,9 +75,9 @@ $(document).ready(function() {
     }
 
     var studente_utente = {
-        "nome": "",
-        "cognome": "",
-        "eta": "",
+        // "nome": "",
+        // "cognome": "",
+        // "eta": "",
     };
 
 
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
         studente_utente.cognome = prompt("Inserisci il tuo cognome");
 
-        studente_utente.eta = prompt("Inserisci la tua età");
+        studente_utente.eta = parseInt(prompt("Inserisci la tua età"));
 
         studenti.push(studente_utente);
 
